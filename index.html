@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visualizador PDF.js Express - Rutra Gourmet</title>
+  <link
+    rel="stylesheet"
+    href="https://pdfjs.express/build/pdfjs-express.min.css"
+  />
+</head>
+<body>
+  <div id="viewerContainer" style="width: 100%; height: 90vh;"></div>
+
+  <script src="https://pdfjs.express/build/pdfjs-express.min.js"></script>
+  <script>
+    const viewer = new PDFJSExpress.Viewer({
+      container: document.getElementById('viewerContainer'),
+      path: 'https://pdfjs.express/build',
+      licenseKey: '', // deixe vazio para modo gratuito limitado
+    });
+
+    viewer.loadDocument(
+      'https://raw.githubusercontent.com/rutramenswear/Rutra_Gourmet/main/Rutra%20Gourmet.pdf'
+    );
+  </script>
+</body>
+</html>
