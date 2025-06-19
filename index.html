@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,12 +17,9 @@
     const viewer = new PDFJSExpress.Viewer({
       container: document.getElementById('viewerContainer'),
       path: 'https://pdfjs.express/build',
-      licenseKey: '', // deixe vazio para modo gratuito limitado
+      licenseKey: '',
     });
-
-    viewer.loadDocument(
-      'https://raw.githubusercontent.com/rutramenswear/Rutra_Gourmet/main/Rutra%20Gourmet.pdf'
-    );
+    viewer.loadDocument('Rutra Gourmet.pdf');
   </script>
 </body>
 </html>
